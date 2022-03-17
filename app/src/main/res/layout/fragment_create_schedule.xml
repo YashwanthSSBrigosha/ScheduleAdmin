@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CreateScheduleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Class"
+                    android:textColor="#191919"
+                    android:textSize="12sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_box"
+                    android:drawableRight="@drawable/search"
+                    android:elevation="2dp"
+                    android:hint="Search Classes"
+                    android:paddingVertical="6dp"
+                    android:paddingStart="24dp"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Subject"
+                    android:textColor="#191919"
+                    android:textSize="12sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_box"
+                    android:drawableRight="@drawable/search"
+                    android:elevation="2dp"
+                    android:hint="Search Subject"
+                    android:paddingVertical="7dp"
+                    android:paddingStart="24dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Teacher"
+                    android:textColor="#191919"
+                    android:textSize="12sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_box"
+                    android:drawableRight="@drawable/search"
+                    android:elevation="2dp"
+                    android:hint="Search Teacher"
+                    android:paddingVertical="6dp"
+                    android:paddingStart="24dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Start Date"
+                    android:textColor="#191919"
+                    android:textSize="12sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/startDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_box"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:elevation="2dp"
+                    android:focusableInTouchMode="false"
+                    android:hint="01/01/1111"
+                    android:paddingVertical="6dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Start Time"
+                            android:textColor="#191919"
+                            android:textSize="12sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/startTimeACTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/stroke_box"
+                            android:drawableRight="@drawable/clock"
+                            android:elevation="2dp"
+                            android:focusableInTouchMode="false"
+                            android:hint="2:30PM"
+                            android:paddingVertical="6dp"
+                            android:paddingStart="24dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="End Time"
+                            android:textColor="#191919"
+                            android:textSize="12sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/endTimeACTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:background="@drawable/stroke_box"
+                            android:drawableRight="@drawable/clock"
+                            android:elevation="2dp"
+                            android:focusableInTouchMode="false"
+                            android:hint="3:30 PM"
+                            android:paddingVertical="6dp"
+                            android:paddingStart="24dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!-- sun mon -->
+                <com.dpro.widgets.WeekdaysPicker
+                    android:id="@+id/weekdays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sunday_first_day="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Last Date"
+                    android:textColor="#191919"
+                    android:textSize="12sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_box"
+                    android:elevation="2dp"
+                    android:hint="01/01/1111"
+                    android:paddingVertical="6dp"
+                    android:paddingStart="24dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:columnOrderPreserved="true"
+                    android:rowCount="2"
+                    android:rowOrderPreserved="true">
+
+                    <Button
+                        android:id="@+id/zoomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/zoom_default"
+                        android:drawableLeft="@drawable/zoom_dl"
+                        android:onClick="selectButton"
+                        android:text="zoom"
+                        android:textColor="#1089FF" />
+
+                    <Button
+                        android:id="@+id/conferenceButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/conference_default"
+                        android:drawableLeft="@drawable/conference_dl"
+                        android:drawablePadding="4dp"
+                        android:onClick="selectButton"
+                        android:text="conference"
+                        android:textColor="#594099" />
+
+                    <Button
+                        android:id="@+id/broadcastButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/broadcast_default"
+                        android:drawableLeft="@drawable/broadcast_dl"
+                        android:drawablePadding="4dp"
+                        android:onClick="selectButton"
+                        android:text="broadcast"
+                        android:textColor="#FFA931" />
+
+                    <Button
+                        android:id="@+id/offlineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/offline_default"
+                        android:drawableStart="@drawable/offline_dl"
+                        android:drawablePadding="4dp"
+                        android:onClick="selectButton"
+                        android:text="offline"
+                        android:textColor="#28DF99" />
+                </GridLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_marginTop="18dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#594099"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textColor="@color/white"
+            android:paddingHorizontal="50dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</FrameLayout>

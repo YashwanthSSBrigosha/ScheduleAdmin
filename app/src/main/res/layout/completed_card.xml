@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/completedSubjectIV"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/modeCompletedIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:src="@drawable/lab_offline"
+            app:layout_constraintStart_toEndOf="@+id/completedSubjectIV"
+            app:layout_constraintTop_toTopOf="@+id/completedSubjectIV" />
+
+        <TextView
+            android:id="@+id/subjectCompletedTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botany"
+            app:layout_constraintStart_toStartOf="@+id/modeCompletedIV"
+            app:layout_constraintTop_toBottomOf="@+id/modeCompletedIV"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/classAndStreamCompetedTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/subjectCompletedTV"
+            app:layout_constraintTop_toBottomOf="@+id/subjectCompletedTV"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/video_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/completedTeacherIV"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/completedSubjectIV"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+        <TextView
+            android:id="@+id/completedTeacherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joel E. Rice"
+            app:layout_constraintStart_toEndOf="@+id/completedTeacherIV"
+            app:layout_constraintTop_toTopOf="@+id/completedTeacherIV"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/completedStartTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/completedTeacherTV" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            app:layout_constraintEnd_toStartOf="@+id/completedEndTimeTV"
+            app:layout_constraintTop_toTopOf="@+id/completedStartTimeTV" />
+
+        <TextView
+            android:id="@+id/completedEndTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:text="11:00 AM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/completedStartTimeTV" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"
+            app:layout_constraintEnd_toStartOf="@+id/completedStartTimeTV"
+            app:layout_constraintTop_toTopOf="@+id/completedStartTimeTV"
+            android:layout_marginEnd="8dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

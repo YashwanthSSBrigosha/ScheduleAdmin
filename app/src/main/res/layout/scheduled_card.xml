@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="8dp"
+    ndroid:elevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/scheduledSubjectIV"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/scheduledModeIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:src="@drawable/lab_offline"
+            app:layout_constraintStart_toEndOf="@+id/scheduledSubjectIV"
+            app:layout_constraintTop_toTopOf="@+id/scheduledSubjectIV" />
+
+        <TextView
+            android:id="@+id/scheduledSubjectTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botany"
+            app:layout_constraintStart_toStartOf="@+id/scheduledModeIV"
+            app:layout_constraintTop_toBottomOf="@+id/scheduledModeIV"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/scheduledClassAndStreamTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XII - A: Commerce"
+            app:layout_constraintStart_toStartOf="@+id/scheduledSubjectTV"
+            app:layout_constraintTop_toBottomOf="@+id/scheduledSubjectTV"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/scheduledMoreIV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_more_vert"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/scheduledTeacherIV"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduledSubjectIV"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+        <TextView
+            android:id="@+id/scheduledTeacherNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joel E. Rice"
+            app:layout_constraintStart_toEndOf="@+id/scheduledTeacherIV"
+            app:layout_constraintTop_toTopOf="@+id/scheduledTeacherIV"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/scheduledStartTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/scheduledTeacherNameTV" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            app:layout_constraintEnd_toStartOf="@+id/scheduledEndTime"
+            app:layout_constraintTop_toTopOf="@+id/scheduledStartTimeTV" />
+
+        <TextView
+            android:id="@+id/scheduledEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:text="11:00 AM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scheduledStartTimeTV" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/time"
+            app:layout_constraintEnd_toStartOf="@+id/scheduledStartTimeTV"
+            app:layout_constraintTop_toTopOf="@+id/scheduledStartTimeTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
